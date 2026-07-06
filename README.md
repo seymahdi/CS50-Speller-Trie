@@ -1,38 +1,36 @@
-# Questions
+# CS50 Speller (Trie)
 
-## What is pneumonoultramicroscopicsilicovolcanoconiosis?
+This repository contains my personal solution to the Speller (Trie) problem from Harvard University's CS50x course.
 
-According to Merriam-Webster's Medical Dictionary,
-pneumonoultramicroscopicsilicovolcanoconiosis is a
-pneumoconiosis caused by inhalation of very fine
-silicate or quartz dust.
+## Description
 
-I'd also assume that it's the longest english word.
+This project implements a spell checker using a Trie data structure, providing efficient dictionary storage and fast word lookup.
 
-## According to its man page, what does `getrusage` do?
+## Language
 
-getrusage() returns resource usage measures for who, which can be one of the following.
+- C
 
-## Per that same man page, how many members are in a variable of type `struct rusage`?
+## Concepts Practiced
 
-16
+- Trie
+- Data Structures
+- Algorithms
+- Memory Management
+- File I/O
 
-## Why do you think we pass `before` and `after` by reference (instead of by value) to `calculate`, even though we're not changing their contents?
+## Features
 
-It appears that the rusage struct takes considerable chunk of memory so we better avoid making extraneous copies.
+- Loads a dictionary into a Trie
+- Performs fast word lookups
+- Efficient memory usage
+- Spell checking for text files
 
-## Explain as precisely as possible, in a paragraph or more, how `main` goes about reading words from a file. In other words, convince us that you indeed understand how that function's `for` loop works.
+## Course
 
-It reads characters one-by-one into the word buffer until it reaches EOF. Words can only contain alphabetical
-characters and apostrophes. Words that are longer than LENGTH and thus wouldn't fit into the buffer are dropped
-entirely. Words which contain numbers are ignored completely as well. Whole words are then terminated
-with a NUL character and checked against the dictionary of valid words.
+Harvard CS50x – Introduction to Computer Science
 
-## Why do you think we used `fgetc` to read each word's characters one at a time rather than use `fscanf` with a format string like `"%s"` to read whole words at a time? Put another way, what problems might arise by relying on `fscanf` alone?
+## Author
 
-Because %s would treat words containing numbers and other disallowed characters as valid which
-based on our definition of the word is not.
+Developed by seymahdi as part of the Harvard CS50x learning journey.
 
-## Why do you think we declared the parameters for `check` and `load` as `const` (which means "constant")?
-
-To declare that the data that the pointer points to must not be changed.
+GitHub: https://github.com/seymahdi
